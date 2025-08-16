@@ -6,6 +6,8 @@ export const dbConnection = async () => {
     await mongoose.connect(process.env.MONGODB_URI);
 
     console.log("DB connection established");
+    console.log(`Server running at http://localhost:${process.env.PORT || 5000}`);
+    
   } catch (error) {
     console.log("DB Error: " + error);
   }
